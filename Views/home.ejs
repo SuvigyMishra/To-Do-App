@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			rel="stylesheet"
+			href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+			integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="stylesheet" href="home.css" />
+		<title>To Do App</title>
+	</head>
+
+	<body>
+		<p id="app-title">To Do App</p>
+
+		<form action="/add-task" method="POST" id="submit-form">
+			<div id="submit-form-div1">
+				<label for="decription-input"> Description </label>
+				<textarea name="task" id="decription-input" placeholder="What do you need to do?" required></textarea>
+			</div>
+
+			<div id="submit-form-div2">
+				<label for="category-select"> Category </label>
+				<select id="category-select" name="category" required>
+					<option value="" hidden selected>Select catageory</option>
+					<option value="Personal">Personal</option>
+					<option value="Work">Work</option>
+					<option value="School">School</option>
+					<option value="Cleaning">Cleaning</option>
+					<option value="Other">Other</option>
+				</select>
+			</div>
+
+			<div id="submit-form-div3">
+				<label for="date-select">Due Date</label>
+				<input type="date" name="dueDate" id="date-select" required />
+			</div>
+		</form>
+
+		<button id="add-task-btn" type="submit" form="submit-form">
+			<i class="fas fa-plus"></i>
+			<p>Add Task</p>
+		</button>
+
+		<button id="delete-task-btn" type="submit" form="delete-form">
+			<i class="fas fa-trash-alt"></i>
+			<p>Delete Task</p>
+		</button>
+
+		<form action="/delete-task" method="POST" id="delete-form">
+			<ul type="none">
+				<% for(let i of tasks) {%>
+				<li class="list-element">
+					<input type="checkbox" name="deleteTask" value="<%-i.id%>" />
+					<div class="task-box">
+						<p><%= i.task %></p>
+					</div>
+					<div class="category-box">
+						<p><%= i.category %></p>
+						<p><%= i.dueDate%></p>
+					</div>
+				</li>
+				<% } %>
+			</ul>
+		</form>
+	</body>
+</html>

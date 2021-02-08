@@ -1,0 +1,159 @@
+html {
+	background-color: white;
+}
+
+body {
+	background-color: rgb(200, 200, 200);
+	height: auto;
+	width: 500px;
+	margin: auto;
+	margin-top: 20px;
+	padding: 10px;
+	padding-bottom: 0;
+	border: 2px solid black;
+	border-radius: 12px;
+	font-family: sans-serif;
+}
+
+body #app-title {
+	text-align: center;
+	font-size: 40px;
+	margin: 10px;
+}
+
+#submit-form {
+	width: 100%;
+}
+
+#submit-form-div1 {
+	margin-top: 15px;
+	padding: 5px;
+	background-color: rgb(223, 220, 220);
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
+
+#submit-form-div1 label {
+	display: block;
+	margin-top: 2px;
+	font-size: 15px;
+}
+
+#submit-form-div1 textarea {
+	height: 40px;
+	width: 99%;
+	display: block;
+	border: 0px;
+	margin-top: 5px;
+	background-color: rgb(241, 240, 240);
+	color: black;
+	font-size: 15px;
+}
+
+#submit-form-div2 {
+	margin-top: 15px;
+	padding: 5px;
+	background-color: rgb(223, 220, 220);
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	display: inline-block;
+	width: 47%;
+}
+
+#submit-form-div2 label {
+	display: block;
+	margin-top: 2px;
+	font-size: 15px;
+}
+
+#submit-form-div2 select {
+	width: 99%;
+	height: 20px;
+	display: block;
+	border: 0px;
+	margin-top: 5px;
+	background-color: rgb(241, 240, 240);
+	font-size: 15px;
+}
+
+#submit-form-div3 {
+	margin-top: 15px;
+	padding: 5px;
+	vertical-align: top;
+	background-color: rgb(223, 220, 220);
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	display: inline-block;
+	width: 48%;
+}
+
+#submit-form-div3 label {
+	display: block;
+	margin-top: 2px;
+	font-size: 15px;
+}
+
+#submit-form-div3 input {
+	width: 99%;
+	height: 20px;
+	display: block;
+	border: 0px;
+	margin-top: 5px;
+	background-color: rgb(241, 240, 240);
+	font-size: 15px;
+}
+
+button {
+	margin: 40px 45px 40px 45px;
+	width: 150px;
+	height: 50px;
+}
+
+button i {
+	display: inline-block;
+	margin: 5px;
+}
+
+button p {
+	display: inline-block;
+	margin: 10px;
+	font-size: 15px;
+}
+
+#add-task-btn {
+	background-color: rgb(77, 127, 207);
+}
+
+#delete-task-btn {
+	background-color: rgb(207, 77, 77);
+}
+
+#delete-form ul {
+	padding: 0;
+	margin-top: 0;
+}
+
+.list-element {
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	margin-bottom: 5px;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background-color: rgb(223, 220, 220);
+}
+
+.task-box {
+	flex-basis: 65%;
+}
+
+.task-box p {
+	font-size: 20px;
+	margin: 0;
+	height: 100%;
+}
+
+.category-box p {
+	margin: 2px;
+}
